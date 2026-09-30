@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Technical Arsenal — Bansil Rakholiya</title>
+  <meta name="description" content="Proficiency across C#, C++, Java and JavaScript, plus architecture patterns, databases and tooling, visualised with interactive meters and a radar chart." />
+  <meta property="og:title" content="Technical Arsenal — Bansil Rakholiya" />
+  <meta property="og:description" content="Languages, architecture, databases and tooling, visualised." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (() => {
+      const t = localStorage.getItem("br-theme");
+      document.documentElement.setAttribute("data-theme", t || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"));
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress-bar" role="presentation"></div>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="index.html" aria-label="Bansil Rakholiya — home">BR<span>.</span></a>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="projects.html">Projects</a></li>
+        <li><a class="nav-link" href="skills.html">Skills</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle colour theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="icon-btn close-btn" type="button" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <main id="main" class="page">
+    <section class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Capabilities</p>
+          <h1 id="skills-title">Technical arsenal</h1>
+          <p class="lead">Hover or focus any skill for the specific capability behind the number. Percentages reflect depth of production use, not enthusiasm.</p>
+        </div>
+
+        <div class="grid grid--2" style="align-items:start">
+          <!-- Core languages as animated meters -->
+          <div class="card" data-reveal>
+            <h2 style="font-size:var(--fs-h3)">Core languages</h2>
+            <div class="meter">
+              <div class="meter__head"><span data-tip="Memory management, RAII, move semantics, lock-free queues, allocator design and perf profiling." data-tip-title="C++20">C++</span><span>92%</span></div>
+              <div class="meter__track"><div class="meter__fill" data-level="92"></div></div>
+            </div>
+            <div class="meter">
+              <div class="meter__head"><span data-tip="Spring Boot services, JPA transaction semantics, concurrency and JVM tuning under sustained load." data-tip-title="Java 17">Java</span><span>94%</span></div>
+              <div class="meter__track"><div class="meter__fill" data-level="94"></div></div>
+            </div>
+            <div class="meter">
+              <div class="meter__head"><span data-tip="ASP.NET minimal APIs, EF Core, async pipelines and identity services on .NET 8." data-tip-title="C# / .NET">C#</span><span>90%</span></div>
+              <div class="meter__track"><div class="meter__fill" data-level="90"></div></div>
+            </div>
+            <div class="meter">
+              <div class="meter__head"><span data-tip="ES6+ modules, Web Components, Web Workers, CRDT sync and render-budget-aware DOM work." data-tip-title="JavaScript">JavaScript</span><span>93%</span></div>
+              <div class="meter__track"><div class="meter__fill" data-level="93"></div></div>
+            </div>
+            <div class="meter">
+              <div class="meter__head"><span data-tip="Semantic document structure, landmark regions, ARIA patterns and progressive enhancement." data-tip-title="HTML5">HTML5</span><span>96%</span></div>
+              <div class="meter__track"><div class="meter__fill" data-level="96"></div></div>
+            </div>
+            <div class="meter" style="margin-bottom:0">
+              <div class="meter__head"><span data-tip="Grid and Flexbox layout, custom-property design systems, container queries and fluid clamp() typography." data-tip-title="CSS3">CSS3</span><span>95%</span></div>
+              <div class="meter__track"><div class="meter__fill" data-level="95"></div></div>
+            </div>
+          </div>
+
+          <!-- Radar chart -->
+          <div class="card radar-wrap" data-reveal data-reveal-delay="120">
+            <h2 style="font-size:var(--fs-h3);align-self:flex-start">Discipline balance</h2>
+            <canvas class="radar" id="radar" role="img"
+              aria-label="Radar chart: backend 94 percent, systems 86, frontend 88, databases 90, DevOps 78, architecture 92."></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="arch-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Architecture</p>
+          <h2 id="arch-title">Patterns I design with</h2>
+        </div>
+        <div class="grid grid--3">
+          <article class="card" data-reveal>
+            <h3>Object-Oriented Design</h3>
+            <p>SOLID applied with judgement, composition over inheritance, and domain models that carry behaviour rather than anaemic data bags.</p>
+            <ul class="tags"><li class="tag" data-tip="Aggregates, value objects, invariants enforced at the boundary." data-tip-title="DDD">DDD</li><li class="tag" data-tip="Interface segregation and dependency inversion at module seams." data-tip-title="SOLID">SOLID</li></ul>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="80">
+            <h3>RESTful &amp; contract-first APIs</h3>
+            <p>Resource modelling, idempotency keys, cursor pagination, versioning strategy and generated clients from a single source of truth.</p>
+            <ul class="tags"><li class="tag" data-tip="Spec-first design with backwards-compatible evolution rules." data-tip-title="OpenAPI">OpenAPI</li><li class="tag" data-tip="Safe retries via idempotency keys and dedupe windows." data-tip-title="Idempotency">Idempotency</li></ul>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="160">
+            <h3>Microservices &amp; messaging</h3>
+            <p>Bounded contexts, transactional outbox, saga orchestration and consumer-driven contracts — decomposition only where it earns its cost.</p>
+            <ul class="tags"><li class="tag" data-tip="Partitioned topics, exactly-once semantics, lag-driven backpressure." data-tip-title="Kafka">Kafka</li><li class="tag" data-tip="Atomic state change plus event publication in one transaction." data-tip-title="Outbox">Outbox</li></ul>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="240">
+            <h3>MVC &amp; layered UI</h3>
+            <p>Clear separation of routing, view models and presentation, with server-rendered baselines that degrade gracefully.</p>
+            <ul class="tags"><li class="tag" data-tip="Separate write and read models where read pressure demands it." data-tip-title="CQRS">CQRS</li><li class="tag" data-tip="ASP.NET MVC and Spring MVC in production." data-tip-title="MVC">MVC</li></ul>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="320">
+            <h3>Databases</h3>
+            <p>Normalised schemas, deliberate denormalisation, index and query-plan analysis, temporal tables for audit, migration discipline.</p>
+            <ul class="tags"><li class="tag" data-tip="Window functions, CTEs, plan analysis, index strategy." data-tip-title="SQL">SQL</li><li class="tag" data-tip="Row-level security, partitioning and JSONB modelling." data-tip-title="PostgreSQL">PostgreSQL</li></ul>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="400">
+            <h3>Tooling &amp; delivery</h3>
+            <p>Trunk-based Git flow, containerised builds, automated quality gates and observability wired in before the first release.</p>
+            <ul class="tags"><li class="tag" data-tip="Rebase workflow, atomic commits, bisect-friendly history." data-tip-title="Git">Git</li><li class="tag" data-tip="Shell, systemd, perf, strace and container runtimes." data-tip-title="Linux">Linux</li><li class="tag" data-tip="Pipelines with test, security scan, and progressive rollout stages." data-tip-title="CI/CD">CI/CD</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reusable scroll-linked 3D component: config only, markup is generated -->
+    <section class="scene3d" data-scene3d='{
+      "eyebrow": "Technical depth",
+      "title": "Capability compounds across every layer",
+      "lede": "Strong systems come from understanding how language choices, design boundaries and production operations affect one another.",
+      "hint": "Scroll through the stack",
+      "shapes": ["cube", "torus", "knot"],
+      "hue": 232,
+      "steps": [
+        { "index": "01 — Runtime", "heading": "Choose the right execution model", "body": "C++ for latency-sensitive paths, Java and C# for durable services, and JavaScript for accessible interfaces. The workload determines the language—not habit.", "meta": ["C++20", "Java", "C# / .NET", "JavaScript"] },
+        { "index": "02 — Architecture", "heading": "Create boundaries teams can own", "body": "Domain-driven services, versioned REST contracts and asynchronous workflows keep change local while preserving correctness across the system.", "meta": ["Microservices", "REST APIs", "Event-driven", "OOD"] },
+        { "index": "03 — Operations", "heading": "Engineer for production from day one", "body": "SQL design, Linux diagnostics, automated pipelines and actionable telemetry close the loop between code and real-world behaviour.", "meta": ["PostgreSQL", "Linux", "CI/CD", "Observability"] }
+      ]
+    }'></section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>&copy; <span id="year">2026</span> Bansil Rakholiya. Built with semantic HTML, CSS and vanilla JavaScript.</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
